@@ -1,0 +1,47 @@
+@import 'components/atoms/colors.scss';
+@import 'components/atoms/breakpoints.scss';
+
+
+.usersPage {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 40px;
+  padding-top: 32px;
+  justify-content: center;
+  color: $defaultText;
+  overflow: auto;
+
+  height: 100vh;
+
+  background: #FAFAFA;
+  background-image: url("../../../img/background.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 360px 400px;
+  grid-column-gap: 60px;
+
+  @include media-phone {
+    grid-template-columns: auto;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 360px 400px;
+  grid-column-gap: 60px;
+  
+  @include media-phone {
+    grid-template-columns: auto;
+  }
+
+  .list {
+    & > *:first-child {
+      margin-bottom: 24px;
+    }
+  }
+}

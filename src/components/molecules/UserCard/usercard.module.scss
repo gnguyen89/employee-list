@@ -1,0 +1,59 @@
+@import 'components/atoms/colors.scss';
+
+.userCard {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 8px 16px;
+  background: white;
+  border-radius: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.13);
+
+  // &:hover {
+    
+  // }
+}
+
+.selected {
+  box-shadow: none;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $paleGrey;
+
+  .initials {
+    font-size: 20px;
+    color: white;
+  }
+}
+
+.details {
+  margin-left: 24px;
+  line-height: 1.2;
+
+  .name {
+    font-size: 15px;
+    color: $accent;
+    font-weight: 600;
+  }
+
+  .role {
+    font-size: 14px;
+    color: $accent;
+  }
+
+  .department {
+    margin-top: 4px;
+    font-size: 12px;
+    color: $paleGrey;
+  }
+}

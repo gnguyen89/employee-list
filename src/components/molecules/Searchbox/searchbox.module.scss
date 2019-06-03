@@ -1,0 +1,29 @@
+@import 'components/atoms/colors.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  
+  height: 50px;
+  padding: 16px;
+  border: 1px solid $veryLightGrey;
+  border-radius: 12px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.label {
+  color: $accent;
+  font-weight: 600;
+}
+
+.searchbox {
+  border: none;
+  margin-left: 4px;
+  color: $darkGrey;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
