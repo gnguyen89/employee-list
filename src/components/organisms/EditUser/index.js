@@ -61,13 +61,11 @@ function EditUser({ user, isCreate, addUser, editUser, onCancel }) {
   const [userState, setUserState] = React.useState({});
 
   React.useEffect(() => {
-    user.firstName ? setUserState(Object.assign({}, user, { name: `${user.firstName} ${user.lastName}`})) : setUserState({});
+    user.name ? setUserState(user) : setUserState({});
   }, [user])
 
   const handleSubmit = React.useCallback((data) => {
-    const names = data.name.split(' ');
-    const userObj = Object.assign({}, userState, { firstName: names[0], lastName: names[1] });
-    isCreate ? addUser(userObj) : editUser(userObj);
+    isCreate ? addUser(data) : editUser(data);
   }, [addUser, editUser, userState]);
 
   return (

@@ -38,9 +38,9 @@ function UserProfile({ user, onShare, onEdit, deleteUser }) {
     user ?
     <div className={css.userProfile}>
       <div className={css.top}>
-        <div className={css.picture}><Avatar url={user.photoUrl} firstName={user.firstName} lastName={user.lastName} large /></div>
+        <div className={css.picture}><Avatar url={user.photoUrl} name={user.name} large /></div>
         <div className={css.name}>
-          <div>{user.firstName} {user.lastName}</div>
+          <div>{user.name}</div>
           <div>{user.email}</div>
         </div>
         {!isDeleting ? <div className={css.actions}>

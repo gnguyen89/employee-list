@@ -59,7 +59,7 @@ function Users({ match, history, fetchUsers, users }) {
 
   const handleSearch = React.useCallback((keyword) => {
     const filtered = users.filter(u => {
-      if (u.firstName.toLowerCase().indexOf(keyword) !== -1 || u.lastName.toLowerCase().indexOf(keyword) !== -1) {
+      if (u.name.toLowerCase().indexOf(keyword) !== -1) {
         return true;
       }
       return false;

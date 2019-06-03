@@ -15,7 +15,7 @@
   }
 
   .initials {
-    font-size: 20px;
+    font-size: 24px;
     color: white;
   }
 }
@@ -23,4 +23,8 @@
 .large {
   width: 104px;
   height: 104px;
+
+  .initials {
+    font-size: 32px;
+  }
 }
