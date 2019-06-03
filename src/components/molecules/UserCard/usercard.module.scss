@@ -12,13 +12,14 @@
   
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.13);
 
-  // &:hover {
-    
-  // }
+  &:hover {
+    background: $slightlyGrey;
+  }
 }
 
 .selected {
   box-shadow: none;
+  border: 1px solid $veryLightGrey;
 }
 
 .picture {

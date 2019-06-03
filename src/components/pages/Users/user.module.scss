@@ -27,6 +27,7 @@
 
   @include media-phone {
     grid-template-columns: auto;
+    grid-row-gap: 16px;
   }
 }
 
@@ -37,6 +38,7 @@
   
   @include media-phone {
     grid-template-columns: auto;
+    grid-row-gap: 16px;
   }
 
   .list {

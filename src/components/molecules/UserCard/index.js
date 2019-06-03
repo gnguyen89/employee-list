@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import css from './usercard.module.scss';
+import Avatar from 'components/molecules/Avatar';
 
-function UserCard({ user, isSelected }) {
+import css from './userCard.module.scss';
+
+function UserCard({ user, isSelected, onClick }) {
   const { photoUrl, firstName, lastName, role, department } = user;
   return (
-    <div className={classnames(css.userCard, { [css.selected]: isSelected })}>
+    <div className={classnames(css.userCard, { [css.selected]: isSelected })} onClick={onClick}>
       <div className={css.picture}>
-        {photoUrl ? <img src={photoUrl} alt="profile-pic" /> : <div className={css.initials}>{`${firstName.charAt(0)} ${lastName.charAt(0)}`}</div>}
+        <Avatar url={photoUrl} firstName={firstName} lastName={lastName} />
       </div>
       <div className={css.details}>
         <div className={css.name}>{firstName} {lastName}</div>
@@ -23,6 +25,7 @@ function UserCard({ user, isSelected }) {
 UserCard.propTypes = {
   isSelected: PropTypes.bool,
   user: PropTypes.object,
+  onClick: PropTypes.func,
 }
 
 export default UserCard;

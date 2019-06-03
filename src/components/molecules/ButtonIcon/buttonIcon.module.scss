@@ -1,0 +1,22 @@
+@import 'components/atoms/colors.scss';
+
+
+.buttonIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  background: $slightlyGrey;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background: $veryLightGrey;
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+}

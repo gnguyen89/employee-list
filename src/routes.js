@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import App from 'components/pages/App';
-import Test from 'components/pages/Test';
 import Users from 'components/pages/Users';
 
 function UsersRoute(props) {
@@ -9,9 +8,11 @@ function UsersRoute(props) {
 
   return (
     <Switch>
+      <Route path={`${path}/all`} component={Users} />
       <Route path={`${path}/new`} component={Users} />
       <Route path={`${path}/:userId`} component={Users} />
-      <Route component={Users} />
+      <Route path={`${path}/:userId/edit`} component={Users} />
+      <Redirect to={`${path}/all`} />
     </Switch>
   );
 }
@@ -22,7 +23,6 @@ function AppRoute() {
     <Switch>
       <Route exact path="/" component={App} />
       <Route path="/users" component={UsersRoute} />
-      <Route path="/test" component={Test} />
       <Redirect to="/" />
     </Switch>
   </Router>;
